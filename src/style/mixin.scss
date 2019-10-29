@@ -1,0 +1,55 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin font($color, $size) {
+    font-size: $size;
+    color: $color;
+}
+@mixin position-relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+@mixin position-absolute {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+@mixin position-fixed($color) {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: $color;
+}
+@mixin scrollBar {
+    &::-webkit-scrollbar-track-piece {
+        background: #d3dce6;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #99a9bf;
+        border-radius: 20px;
+    }
+}
+@mixin before($width, $height) {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: $width;
+        height: $height;
+    } 
+}
+@mixin after($width, $height) {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: $width;
+        height: $height;
+    }
+}
